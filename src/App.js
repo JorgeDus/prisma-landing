@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Briefcase, Users, Search, CheckCircle, Globe, TrendingUp, ChevronDown, GraduationCap, Building2, ArrowRight, Mail } from 'lucide-react';
 import './App.css';
+import demoImage from './assets/prisma-ej.png';
 
 // Custom hook for scroll animations
 const useScrollAnimation = (options = {}) => {
@@ -209,14 +210,17 @@ const PrismaLanding = () => {
               href="https://sled-pixel-99459018.figma.site/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="block aspect-video bg-white rounded-lg flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] group cursor-pointer"
+              className="block bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] group cursor-pointer overflow-hidden"
             >
-              <div className="text-center">
-                <Briefcase className="w-20 h-20 text-purple-600 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" />
-                <p className="text-gray-600 font-semibold text-lg group-hover:text-purple-600 transition-colors">Demo Interactivo</p>
-                <p className="text-sm text-gray-500 mt-2">Haz clic para ver el demo →</p>
-              </div>
+              <img 
+                src={demoImage} 
+                alt="Demo Interactivo de Prisma" 
+                className="w-full h-auto object-cover group-hover:opacity-90 transition-opacity duration-300"
+              />
             </a>
+            <p className="text-center text-gray-600 mt-4 text-sm font-medium">
+              Haz click en la imagen para ver cómo funciona
+            </p>
           </div>
         </div>
       </SectionWithAnimation>
