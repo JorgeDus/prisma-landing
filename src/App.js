@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Briefcase, Users, Search, CheckCircle, Globe, TrendingUp, ChevronDown, GraduationCap, Building2, Award, ArrowRight, Mail } from 'lucide-react';
+import { Briefcase, Users, Search, CheckCircle, Globe, TrendingUp, ChevronDown, GraduationCap, Building2, ArrowRight, Mail } from 'lucide-react';
 import './App.css';
 
 // Custom hook for scroll animations
@@ -602,17 +602,17 @@ const PrismaLanding = () => {
             <div>
               <h4 className="font-semibold mb-4">Para</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-white transition">Estudiantes</a></li>
-                <li><a href="#" className="hover:text-white transition">Universidades</a></li>
-                <li><a href="#" className="hover:text-white transition">Empresas</a></li>
+                <li><a href="#waitlist" className="hover:text-white transition">Estudiantes</a></li>
+                <li><a href="#waitlist" className="hover:text-white transition">Universidades</a></li>
+                <li><a href="#waitlist" className="hover:text-white transition">Empresas</a></li>
               </ul>
             </div>
 
             <div>
               <h4 className="font-semibold mb-4">Recursos</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-white transition">Blog (próximamente)</a></li>
-                <li><a href="#" className="hover:text-white transition">Ayuda</a></li>
+                <li><span className="hover:text-white transition cursor-default">Blog (próximamente)</span></li>
+                <li><a href="#waitlist" className="hover:text-white transition">Ayuda</a></li>
               </ul>
             </div>
 
