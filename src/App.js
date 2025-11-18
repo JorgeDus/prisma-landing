@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Briefcase, Users, Search, CheckCircle, Globe, TrendingUp, ChevronDown, GraduationCap, Building2, ArrowRight, Mail } from 'lucide-react';
+import { Briefcase, Users, Search, CheckCircle, Globe, TrendingUp, ChevronDown, GraduationCap, Building2, ArrowRight, Mail, Menu, X } from 'lucide-react';
 import './App.css';
 import demoImage from './assets/prisma-ej.png';
 
@@ -67,6 +67,7 @@ const PrismaLanding = () => {
     type: 'estudiante'
   });
   const [showSuccess, setShowSuccess] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Detectar si el formulario se envió exitosamente
   useEffect(() => {
@@ -152,7 +153,7 @@ const PrismaLanding = () => {
               </div>
             </div>
             
-            {/* Navigation */}
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6">
               <a href="#estudiantes" className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">
                 Estudiantes
@@ -163,22 +164,61 @@ const PrismaLanding = () => {
               <a href="#empresas" className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
                 Empresas
               </a>
-            <a 
-              href="#waitlist" 
+              <a 
+                href="#waitlist" 
                 className="px-6 py-2 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
               >
                 Únete
               </a>
             </nav>
 
-            {/* Mobile CTA */}
-            <a 
-              href="#waitlist" 
-              className="md:hidden px-6 py-2 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-all duration-300 font-semibold shadow-md"
+            {/* Mobile Menu Button */}
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
+              aria-label="Toggle menu"
             >
-              Únete
-            </a>
+              {mobileMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
           </div>
+
+          {/* Mobile Menu Dropdown */}
+          {mobileMenuOpen && (
+            <nav className="md:hidden mt-4 pb-4 space-y-3 animate-fade-in">
+              <a 
+                href="#estudiantes" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-4 py-3 text-center font-medium text-gray-700 bg-purple-50 hover:bg-purple-100 rounded-xl transition-colors border border-purple-200"
+              >
+                🎓 Estudiantes
+              </a>
+              <a 
+                href="#universidades" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-4 py-3 text-center font-medium text-gray-700 bg-blue-50 hover:bg-blue-100 rounded-xl transition-colors border border-blue-200"
+              >
+                🏛️ Universidades
+              </a>
+              <a 
+                href="#empresas" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-4 py-3 text-center font-medium text-gray-700 bg-green-50 hover:bg-green-100 rounded-xl transition-colors border border-green-200"
+              >
+                💼 Empresas
+              </a>
+              <a 
+                href="#waitlist" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-4 py-3 text-center font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-xl transition-all shadow-md"
+              >
+                Únete a la Waitlist
+              </a>
+            </nav>
+          )}
         </div>
       </header>
 
