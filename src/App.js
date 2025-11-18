@@ -87,8 +87,59 @@ const PrismaLanding = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      {/* Success Popup Modal */}
+      {showSuccess && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-fade-in">
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
+          
+          {/* Modal */}
+          <div className="relative bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl transform animate-scale-in">
+            {/* Icono de éxito */}
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center animate-bounce-once">
+                <CheckCircle className="w-12 h-12 text-white" />
+              </div>
+            </div>
+            
+            {/* Contenido */}
+            <div className="text-center mb-6">
+              <h3 className="text-3xl font-bold text-gray-900 mb-3">
+                ¡Registro Exitoso! 🎉
+              </h3>
+              <p className="text-lg text-gray-600 leading-relaxed">
+                Gracias por unirte a la lista de espera de <span className="font-semibold text-purple-600">Prisma</span>.
+              </p>
+              <p className="text-gray-600 mt-3">
+                Te contactaremos pronto con novedades sobre el lanzamiento de la beta.
+              </p>
+            </div>
+
+            {/* Botón de cerrar */}
+            <button
+              onClick={() => {
+                setShowSuccess(false);
+                window.history.replaceState({}, document.title, window.location.pathname);
+              }}
+              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-xl font-bold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+            >
+              ¡Entendido!
+            </button>
+
+            {/* Badge decorativo */}
+            <div className="mt-6 text-center">
+              <span className="inline-flex items-center text-sm text-gray-500">
+                <span className="mr-2">✨</span>
+                Bienvenido a la comunidad Prisma
+                <span className="ml-2">✨</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Header */}
-      <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
+      <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-3">
@@ -100,9 +151,30 @@ const PrismaLanding = () => {
                 <p className="text-xs text-gray-500">Donde el talento encuentra su luz</p>
               </div>
             </div>
+            
+            {/* Navigation */}
+            <nav className="hidden md:flex items-center space-x-6">
+              <a href="#estudiantes" className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">
+                Estudiantes
+              </a>
+              <a href="#universidades" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
+                Universidades
+              </a>
+              <a href="#empresas" className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
+                Empresas
+              </a>
             <a 
               href="#waitlist" 
-              className="px-6 py-2 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
+                className="px-6 py-2 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
+              >
+                Únete
+              </a>
+            </nav>
+
+            {/* Mobile CTA */}
+            <a 
+              href="#waitlist" 
+              className="md:hidden px-6 py-2 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-all duration-300 font-semibold shadow-md"
             >
               Únete
             </a>
@@ -201,7 +273,346 @@ const PrismaLanding = () => {
         </div>
       </SectionWithAnimation>
 
-      {/* La Solución */}
+      {/* Para Estudiantes */}
+      <SectionWithAnimation id="estudiantes" className="py-24 bg-gradient-to-br from-purple-50 via-white to-purple-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl mb-6 shadow-lg">
+              <GraduationCap className="w-9 h-9 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+              Para Estudiantes
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Construye tu identidad profesional desde el primer día universitario
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Tu Portfolio Vivo</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Cada proyecto, trabajo o experiencia queda documentada con contexto real. No más CVs genéricos que no muestran tu verdadero talento.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Sube proyectos con imágenes, videos y descripción detallada</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Muestra tu proceso de trabajo, no solo el resultado final</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Valida tus habilidades con certificaciones y proyectos reales</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🤝 Conecta y Colabora</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Encuentra compañeros para ese proyecto que tienes en mente, conecta con alumni que ya están donde quieres estar, y construye tu red profesional desde la universidad.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Busca colaboradores por habilidades específicas</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Conecta con mentores alumni de tu universidad</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Arma equipos para proyectos emprendedores</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Destaca Ante Empresas</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Cuando llegue el momento de buscar oportunidades laborales, tu perfil en Prisma habla por ti. Las empresas ven tu trabajo real, no solo palabras en un CV.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Empresas te descubren por tu portafolio completo</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Tu universidad valida tu perfil, generando confianza</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Recibe oportunidades alineadas con tu talento real</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 shadow-lg text-white">
+              <h3 className="text-2xl font-bold mb-4">💡 ¿Por qué ahora?</h3>
+              <p className="mb-4 text-purple-50 leading-relaxed">
+                Mientras más temprano empieces a construir tu perfil, más completo estará cuando lo necesites.
+              </p>
+              <div className="space-y-3 text-purple-50">
+                <p className="flex items-start">
+                  <span className="text-2xl mr-3">📚</span>
+                  <span>En 1er año: Documenta tus primeros proyectos académicos</span>
+                </p>
+                <p className="flex items-start">
+                  <span className="text-2xl mr-3">🎓</span>
+                  <span>En 3er año: Tienes un portafolio completo y red de contactos</span>
+                </p>
+                <p className="flex items-start">
+                  <span className="text-2xl mr-3">💼</span>
+                  <span>Al graduarte: Destacas inmediatamente ante empleadores</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <a 
+              href="#waitlist" 
+              className="inline-flex items-center px-8 py-4 bg-purple-600 text-white rounded-xl font-bold text-lg hover:bg-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
+            >
+              Únete a la Waitlist de Estudiantes
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </SectionWithAnimation>
+
+      {/* Para Universidades */}
+      <SectionWithAnimation id="universidades" className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-6 shadow-lg">
+              <Building2 className="w-9 h-9 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+              Para Universidades
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Potencia la empleabilidad de tu institución y destaca el talento de tus estudiantes
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">📊 Visibilidad de Resultados</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Muestra al mundo el verdadero impacto de tu educación a través de los perfiles de tus estudiantes.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Showcase institucional con proyectos destacados</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Métricas de empleabilidad en tiempo real</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Historias de éxito de egresados documentadas</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🤝 Red Alumni Activa</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Crea una comunidad donde egresados exitosos mentorean a estudiantes actuales, fortaleciendo tu red institucional.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Conecta estudiantes con alumni por carrera e industria</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Programas de mentoría integrados en la plataforma</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Engagement continuo con tu comunidad egresada</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">💼 Conexión con Empleadores</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Las empresas buscan talento directamente en tu institución, aumentando las oportunidades para tus estudiantes.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Empresas acceden a perfiles validados por tu institución</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Tracking de colocación laboral de egresados</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Ferias de empleo virtuales integradas</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 shadow-lg text-white">
+              <h3 className="text-2xl font-bold mb-4">🎯 Diferenciación Competitiva</h3>
+              <p className="mb-4 text-blue-50 leading-relaxed">
+                En un mercado educativo competitivo, la empleabilidad de tus egresados es tu mejor carta de presentación.
+              </p>
+              <div className="space-y-3 text-blue-50">
+                <p className="flex items-start">
+                  <span className="text-2xl mr-3">📈</span>
+                  <span>Mejora tus rankings de empleabilidad</span>
+                </p>
+                <p className="flex items-start">
+                  <span className="text-2xl mr-3">🌟</span>
+                  <span>Atrae mejores estudiantes con casos de éxito reales</span>
+                </p>
+                <p className="flex items-start">
+                  <span className="text-2xl mr-3">🔗</span>
+                  <span>Fortalece vínculos con el sector empresarial</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <a 
+              href="#waitlist" 
+              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
+            >
+              Agenda una Demo para tu Universidad
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </SectionWithAnimation>
+
+      {/* Para Empresas */}
+      <SectionWithAnimation id="empresas" className="py-24 bg-gradient-to-br from-green-50 via-white to-green-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mb-6 shadow-lg">
+              <Briefcase className="w-9 h-9 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+              Para Empresas
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Descubre y recluta talento joven validado institucionalmente
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Reclutamiento Inteligente</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Busca candidatos por proyectos reales, habilidades demostradas y fit cultural, no solo por palabras clave en un CV.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Filtros por proyectos específicos y habilidades validadas</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Perfiles verificados por instituciones educativas</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Ve el trabajo real antes de la entrevista</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">⚡ Acceso Anticipado</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                No esperes a que se gradúen. Identifica talento prometedor desde etapas tempranas y conviértete en su primera opción.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Programa de pasantías con estudiantes destacados</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Marca empleadora visible para nuevas generaciones</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Pipeline de talento continuo</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">💰 Reducción de Costos</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Menos tiempo y recursos invertidos en procesos de selección. Mejor calidad de candidatos desde el primer filtro.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Reduce tiempo de screening en 70%</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Mayor retención por mejor fit inicial</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Elimina intermediarios costosos</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 shadow-lg text-white">
+              <h3 className="text-2xl font-bold mb-4">🚀 El futuro del reclutamiento</h3>
+              <p className="mb-4 text-green-50 leading-relaxed">
+                Las nuevas generaciones buscan empresas que valoren su trabajo real, no solo títulos y notas.
+              </p>
+              <div className="space-y-3 text-green-50">
+                <p className="flex items-start">
+                  <span className="text-2xl mr-3">🎓</span>
+                  <span>Acceso directo a las mejores universidades</span>
+                </p>
+                <p className="flex items-start">
+                  <span className="text-2xl mr-3">✨</span>
+                  <span>Candidatos pre-validados institucionalmente</span>
+                </p>
+                <p className="flex items-start">
+                  <span className="text-2xl mr-3">🤝</span>
+                  <span>Construye relaciones de largo plazo con el talento</span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <a 
+              href="#waitlist" 
+              className="inline-flex items-center px-8 py-4 bg-green-600 text-white rounded-xl font-bold text-lg hover:bg-green-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
+            >
+              Solicita Acceso Empresarial
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+          </div>
+        </div>
+      </SectionWithAnimation>
+
+      {/* La Solución / Demo */}
       <SectionWithAnimation id="demo" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -234,8 +645,8 @@ const PrismaLanding = () => {
             <p className="text-center text-gray-600 mt-4 text-sm font-medium">
               Haz click en la imagen para ver cómo funciona
             </p>
-          </div>
-        </div>
+              </div>
+            </div>
       </SectionWithAnimation>
 
       {/* Características */}
@@ -290,46 +701,132 @@ const PrismaLanding = () => {
         </div>
       </SectionWithAnimation>
 
-      {/* Cómo Funciona */}
-      <SectionWithAnimation className="py-24 bg-white">
+      {/* Cómo Funciona - El Efecto de Red */}
+      <SectionWithAnimation className="py-24 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 text-center mb-16 tracking-tight">
-            Tu perfil profesional en 4 pasos
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+              El Poder del Efecto de Red de 3 Lados
           </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Prisma crea valor para todos conectando a los actores clave del ecosistema universitario-laboral
+            </p>
+          </div>
 
-          <div className="max-w-4xl mx-auto space-y-8">
-            {[
-              {
-                num: '1',
-                title: 'Crea tu Perfil',
-                desc: 'Empieza con lo básico: quién eres, qué estudias, qué te apasiona'
-              },
-              {
-                num: '2',
-                title: 'Muestra tu Trabajo',
-                desc: 'Sube proyectos, casos, trabajos con imágenes y contexto real'
-              },
-              {
-                num: '3',
-                title: 'Conecta y Crece',
-                desc: 'Encuentra mentores, colaboradores y oportunidades'
-              },
-              {
-                num: '4',
-                title: 'Destaca',
-                desc: 'Tu perfil completo te diferencia cuando más importa'
-              }
-            ].map((step, idx) => (
-              <div key={idx} className="flex items-start space-x-6">
-                <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                  {step.num}
+          <div className="max-w-5xl mx-auto">
+            {/* Flujo visual del efecto de red */}
+            <div className="grid md:grid-cols-3 gap-6 mb-12">
+              {/* Estudiantes */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-purple-200 transform transition-all hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                  <GraduationCap className="w-9 h-9 text-white" />
                 </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{step.title}</h3>
-                  <p className="text-gray-600">{step.desc}</p>
+                <h3 className="text-xl font-bold text-center text-gray-900 mb-3">Estudiantes</h3>
+                <p className="text-center text-gray-600 text-sm mb-4">
+                  Construyen perfiles profesionales completos y validados
+                </p>
+                <div className="space-y-2 text-xs text-gray-600">
+                  <div className="flex items-center">
+                    <ArrowRight className="w-4 h-4 text-purple-600 mr-2" />
+                    <span>Documentan proyectos</span>
+                </div>
+                  <div className="flex items-center">
+                    <ArrowRight className="w-4 h-4 text-purple-600 mr-2" />
+                    <span>Conectan con alumni</span>
+              </div>
+                  <div className="flex items-center">
+                    <ArrowRight className="w-4 h-4 text-purple-600 mr-2" />
+                    <span>Acceden a oportunidades</span>
+          </div>
+        </div>
+              </div>
+
+              {/* Universidades */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-blue-200 transform transition-all hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                  <Building2 className="w-9 h-9 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-center text-gray-900 mb-3">Universidades</h3>
+                <p className="text-center text-gray-600 text-sm mb-4">
+                  Potencian empleabilidad y visibilizan su impacto
+                </p>
+                <div className="space-y-2 text-xs text-gray-600">
+                  <div className="flex items-center">
+                    <ArrowRight className="w-4 h-4 text-blue-600 mr-2" />
+                    <span>Validan estudiantes</span>
+                  </div>
+                  <div className="flex items-center">
+                    <ArrowRight className="w-4 h-4 text-blue-600 mr-2" />
+                    <span>Activan red alumni</span>
+                  </div>
+                  <div className="flex items-center">
+                    <ArrowRight className="w-4 h-4 text-blue-600 mr-2" />
+                    <span>Mejoran rankings</span>
+                  </div>
                 </div>
               </div>
-            ))}
+
+              {/* Empresas */}
+              <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-green-200 transform transition-all hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+                  <Briefcase className="w-9 h-9 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-center text-gray-900 mb-3">Empresas</h3>
+                <p className="text-center text-gray-600 text-sm mb-4">
+                  Descubren talento validado y reducen costos
+                </p>
+                <div className="space-y-2 text-xs text-gray-600">
+                  <div className="flex items-center">
+                    <ArrowRight className="w-4 h-4 text-green-600 mr-2" />
+                    <span>Acceden a perfiles reales</span>
+                  </div>
+                  <div className="flex items-center">
+                    <ArrowRight className="w-4 h-4 text-green-600 mr-2" />
+                    <span>Reducen tiempo screening</span>
+                  </div>
+                  <div className="flex items-center">
+                    <ArrowRight className="w-4 h-4 text-green-600 mr-2" />
+                    <span>Mejoran contratación</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* El ciclo virtuoso */}
+            <div className="bg-gradient-to-br from-purple-600 via-blue-600 to-green-600 rounded-2xl p-8 text-white shadow-2xl">
+              <h3 className="text-2xl font-bold text-center mb-6">El Ciclo Virtuoso de Prisma</h3>
+              <div className="grid md:grid-cols-3 gap-6 text-sm">
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3 backdrop-blur-sm">
+                    <span className="text-2xl font-bold">1</span>
+                  </div>
+                  <p className="leading-relaxed">
+                    <strong>Más estudiantes</strong> crean perfiles → más valor para universidades (showcase de talento)
+                  </p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3 backdrop-blur-sm">
+                    <span className="text-2xl font-bold">2</span>
+                  </div>
+                  <p className="leading-relaxed">
+                    <strong>Más universidades</strong> validan → más confianza para empresas (perfiles verificados)
+                  </p>
+                </div>
+                <div className="flex flex-col items-center text-center">
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3 backdrop-blur-sm">
+                    <span className="text-2xl font-bold">3</span>
+                  </div>
+                  <p className="leading-relaxed">
+                    <strong>Más empresas</strong> buscan talento → más oportunidades para estudiantes
+                  </p>
+                </div>
+              </div>
+              <div className="mt-8 text-center">
+                <p className="text-lg font-semibold text-white/90">
+                  ↻ Y el ciclo se fortalece continuamente
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </SectionWithAnimation>
@@ -444,15 +941,26 @@ const PrismaLanding = () => {
       </SectionWithAnimation>
 
       {/* Waitlist */}
-      <SectionWithAnimation id="waitlist" className="py-24 bg-gradient-to-br from-purple-600 to-pink-600">
+      <SectionWithAnimation id="waitlist" className="py-24 bg-gradient-to-br from-purple-600 via-blue-600 to-pink-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6 tracking-tight">
-              Sé de los primeros en construir tu futuro profesional
+              Únete al Futuro del Talento Universitario
             </h2>
-            <p className="text-xl text-purple-50 leading-relaxed">
-              Estamos lanzando pronto. Únete a la lista de espera y obtén acceso anticipado.
+            <p className="text-xl text-purple-50 leading-relaxed mb-6">
+              Estamos lanzando pronto. Sé parte de la comunidad que conecta estudiantes, universidades y empresas.
             </p>
+            <div className="flex flex-wrap justify-center gap-4 text-sm text-white/90">
+              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                ✨ Early adopters sin costo
+              </span>
+              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                🚀 Acceso exclusivo a beta
+              </span>
+              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
+                🤝 Co-crea con nosotros
+              </span>
+            </div>
           </div>
 
           {showSuccess && (
@@ -507,15 +1015,17 @@ const PrismaLanding = () => {
               </div>
 
               <div>
-                <label className="block text-gray-700 font-semibold mb-2">Universidad</label>
+                <label className="block text-gray-700 font-semibold mb-2">
+                  Universidad / Organización
+                  <span className="text-gray-500 font-normal text-sm ml-2">(opcional)</span>
+                </label>
                 <input
                   type="text"
                   name="universidad"
-                  required
                   value={formData.university}
                   onChange={(e) => setFormData({...formData, university: e.target.value})}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-gray-300"
-                  placeholder="Universidad de Chile"
+                  placeholder="Universidad de Chile, Nombre de tu empresa, etc."
                 />
               </div>
 
@@ -539,24 +1049,14 @@ const PrismaLanding = () => {
                 type="submit"
                 className="group w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-xl font-bold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
               >
-                Unirme a la Lista de Espera
+                Únete a la Waitlist
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
             </div>
 
-            <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm text-gray-600">
-              <span className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-1 text-green-500" />
-                Sin costo para early adopters
-              </span>
-              <span className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-1 text-green-500" />
-                Acceso exclusivo a beta
-              </span>
-              <span className="flex items-center">
-                <CheckCircle className="w-4 h-4 mr-1 text-green-500" />
-                Ayúdanos a construir el producto
-              </span>
+            <div className="mt-6 text-center text-sm text-gray-500">
+              <p>Al registrarte, aceptas que nos comuniquemos contigo sobre Prisma.</p>
+              <p className="mt-2">Respetamos tu privacidad. No spam, lo prometemos. 💜</p>
             </div>
           </form>
         </div>
@@ -573,35 +1073,58 @@ const PrismaLanding = () => {
             {[
               {
                 q: '¿Qué es exactamente Prisma?',
-                a: 'Prisma es una plataforma donde estudiantes universitarios construyen perfiles profesionales completos que van más allá del CV tradicional. Incluye proyectos, habilidades, experiencias, y conexiones con alumni y empresas.'
+                a: 'Prisma es una plataforma donde estudiantes universitarios construyen perfiles profesionales completos que van más allá del CV tradicional. Incluye proyectos, habilidades, experiencias, y conexiones con alumni y empresas.',
+                category: 'general'
               },
               {
                 q: '¿Es solo para carreras técnicas?',
-                a: 'No. Prisma funciona para TODAS las carreras: ingeniería, diseño, derecho, medicina, negocios, artes, etc. El concepto es universal: mostrar tu trabajo más allá de las notas.'
+                a: 'No. Prisma funciona para TODAS las carreras: ingeniería, diseño, derecho, medicina, negocios, artes, etc. El concepto es universal: mostrar tu trabajo más allá de las notas.',
+                category: 'estudiantes'
               },
               {
                 q: '¿Cuándo estará disponible?',
-                a: 'Estamos en desarrollo activo y lanzaremos una beta en los próximos meses. Los que se unan a la lista de espera tendrán acceso prioritario.'
+                a: 'Estamos en desarrollo activo y lanzaremos una beta en los próximos meses. Los que se unan a la lista de espera tendrán acceso prioritario.',
+                category: 'general'
               },
               {
                 q: '¿Tiene algún costo?',
-                a: 'Los early adopters tendrán acceso gratuito. Posteriormente, habrá un tier gratuito con funciones básicas y opciones premium para features avanzados.'
+                a: 'Los early adopters tendrán acceso gratuito. Posteriormente, habrá un tier gratuito con funciones básicas y opciones premium para features avanzados.',
+                category: 'general'
+              },
+              {
+                q: 'Para Universidades: ¿Cómo funciona la integración institucional?',
+                a: 'Trabajamos contigo para integrar Prisma con tus sistemas. Los estudiantes crean perfiles que tu universidad puede validar, creando un showcase institucional de talento. Incluye dashboard de métricas de empleabilidad y herramientas de gestión alumni.',
+                category: 'universidades'
+              },
+              {
+                q: 'Para Empresas: ¿Cómo accedo a los perfiles de talento?',
+                a: 'Las empresas obtienen acceso a nuestra plataforma de búsqueda inteligente. Pueden filtrar candidatos por proyectos reales, habilidades validadas, universidad, y más. También pueden publicar oportunidades que llegan directamente a estudiantes que cumplen el perfil.',
+                category: 'empresas'
               },
               {
                 q: '¿Cómo se diferencia de LinkedIn?',
-                a: 'LinkedIn es genérico para todos los profesionales. Prisma está diseñado específicamente para estudiantes y early-career, con enfoque en proyectos académicos, validación institucional, y conexión con tu comunidad universitaria.'
+                a: 'LinkedIn es genérico para todos los profesionales. Prisma está diseñado específicamente para estudiantes y early-career, con enfoque en proyectos académicos, validación institucional, y conexión con tu comunidad universitaria.',
+                category: 'general'
               },
               {
                 q: '¿Puedo usarlo si ya me gradué?',
-                a: 'Sí! Los alumni pueden mantener su perfil activo, convertirse en mentores de estudiantes actuales, y seguir conectados con su comunidad universitaria.'
+                a: 'Sí! Los alumni pueden mantener su perfil activo, convertirse en mentores de estudiantes actuales, y seguir conectados con su comunidad universitaria.',
+                category: 'estudiantes'
+              },
+              {
+                q: 'Para Universidades: ¿Qué datos y métricas obtendré?',
+                a: 'Tendrás acceso a métricas de empleabilidad de tus egresados, engagement de la red alumni, proyectos destacados por carrera, y más. Todo en tiempo real y con visualizaciones intuitivas.',
+                category: 'universidades'
               },
               {
                 q: '¿Mi universidad necesita estar asociada?',
-                a: 'No necesariamente. Estamos comenzando con universidades partner, pero cualquier estudiante puede crear su perfil. La asociación institucional solo añade validación adicional.'
+                a: 'No necesariamente. Estamos comenzando con universidades partner, pero cualquier estudiante puede crear su perfil. La asociación institucional solo añade validación adicional.',
+                category: 'estudiantes'
               },
               {
                 q: '¿Cómo protegen mis datos?',
-                a: 'Cumplimos con todas las leyes de protección de datos. Tú controlas qué información es pública o privada. Tus datos nunca se venden a terceros.'
+                a: 'Cumplimos con todas las leyes de protección de datos. Tú controlas qué información es pública o privada. Tus datos nunca se venden a terceros.',
+                category: 'general'
               }
             ].map((faq, idx) => (
               <div key={idx} className="bg-white rounded-xl shadow-md border border-gray-200 hover:shadow-lg transition-all duration-200">
@@ -646,9 +1169,9 @@ const PrismaLanding = () => {
             <div>
               <h4 className="font-semibold mb-4">Para</h4>
               <ul className="space-y-2 text-gray-400 text-sm">
-                <li><a href="#waitlist" className="hover:text-white transition">Estudiantes</a></li>
-                <li><a href="#waitlist" className="hover:text-white transition">Universidades</a></li>
-                <li><a href="#waitlist" className="hover:text-white transition">Empresas</a></li>
+                <li><a href="#estudiantes" className="hover:text-white transition">Estudiantes</a></li>
+                <li><a href="#universidades" className="hover:text-white transition">Universidades</a></li>
+                <li><a href="#empresas" className="hover:text-white transition">Empresas</a></li>
               </ul>
             </div>
 
