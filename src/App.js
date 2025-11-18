@@ -66,10 +66,23 @@ const PrismaLanding = () => {
     university: '',
     type: 'estudiante'
   });
+  const [showSuccess, setShowSuccess] = useState(false);
+
+  // Detectar si el formulario se envió exitosamente
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('success') === 'true') {
+      setShowSuccess(true);
+      // Limpiar el parámetro de la URL después de 3 segundos
+      setTimeout(() => {
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }, 3000);
+    }
+  }, []);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`¡Gracias ${formData.name}! Te contactaremos pronto a ${formData.email}`);
+    // FormSubmit se encarga del envío
+    console.log('Formulario enviado a contacto@tuprisma.com');
   };
 
   return (
@@ -442,12 +455,36 @@ const PrismaLanding = () => {
             </p>
           </div>
 
-          <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-2xl">
+          {showSuccess && (
+            <div className="mb-6 bg-green-50 border-2 border-green-500 rounded-xl p-6 animate-fade-in">
+              <div className="flex items-center">
+                <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                <div>
+                  <h3 className="font-bold text-green-900 text-lg">¡Registro exitoso!</h3>
+                  <p className="text-green-700">Gracias por unirte a la lista de espera. Te contactaremos pronto.</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <form 
+            action="https://formsubmit.co/contacto@tuprisma.com" 
+            method="POST"
+            onSubmit={handleSubmit} 
+            className="bg-white rounded-2xl p-8 shadow-2xl"
+          >
+            {/* Configuración de FormSubmit */}
+            <input type="hidden" name="_subject" value="Nuevo registro en Prisma Waitlist" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_next" value={`${window.location.origin}${window.location.pathname}?success=true`} />
+            
             <div className="space-y-4">
               <div>
                 <label className="block text-gray-700 font-semibold mb-2">Nombre</label>
                 <input
                   type="text"
+                  name="nombre"
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({...formData, name: e.target.value})}
@@ -460,6 +497,7 @@ const PrismaLanding = () => {
                 <label className="block text-gray-700 font-semibold mb-2">Email</label>
                 <input
                   type="email"
+                  name="email"
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({...formData, email: e.target.value})}
@@ -472,6 +510,7 @@ const PrismaLanding = () => {
                 <label className="block text-gray-700 font-semibold mb-2">Universidad</label>
                 <input
                   type="text"
+                  name="universidad"
                   required
                   value={formData.university}
                   onChange={(e) => setFormData({...formData, university: e.target.value})}
@@ -483,6 +522,7 @@ const PrismaLanding = () => {
               <div>
                 <label className="block text-gray-700 font-semibold mb-2">Soy:</label>
                 <select
+                  name="tipo"
                   value={formData.type}
                   onChange={(e) => setFormData({...formData, type: e.target.value})}
                   className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-gray-300 bg-white"
@@ -625,7 +665,7 @@ const PrismaLanding = () => {
               <ul className="space-y-2 text-gray-400 text-sm">
                 <li className="flex items-center">
                   <Mail className="w-4 h-4 mr-2" />
-                  hola@prisma.cl
+                  contacto@tuprisma.com
                 </li>
                 <li>📍 Santiago, Chile</li>
               </ul>
