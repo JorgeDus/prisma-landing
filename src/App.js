@@ -313,434 +313,6 @@ const PrismaLanding = () => {
         </div>
       </SectionWithAnimation>
 
-      {/* Para Estudiantes */}
-      <SectionWithAnimation id="estudiantes" className="py-24 bg-gradient-to-br from-purple-50 via-white to-purple-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl mb-6 shadow-lg">
-              <GraduationCap className="w-9 h-9 text-white" />
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
-              Para Estudiantes
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Construye tu identidad profesional desde el primer día universitario
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Tu Portfolio Vivo</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Cada proyecto, trabajo o experiencia queda documentada con contexto real. No más CVs genéricos que no muestran tu verdadero talento.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Sube proyectos con imágenes, videos y descripción detallada</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Muestra tu proceso de trabajo, no solo el resultado final</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Valida tus habilidades con certificaciones y proyectos reales</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🤝 Conecta y Colabora</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Encuentra compañeros para ese proyecto que tienes en mente, conecta con alumni que ya están donde quieres estar, y construye tu red profesional desde la universidad.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Busca colaboradores por habilidades específicas</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Conecta con mentores alumni de tu universidad</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Arma equipos para proyectos emprendedores</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Destaca Ante Empresas</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Cuando llegue el momento de buscar oportunidades laborales, tu perfil en Prisma habla por ti. Las empresas ven tu trabajo real, no solo palabras en un CV.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Empresas te descubren por tu portafolio completo</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Tu universidad valida tu perfil, generando confianza</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Recibe oportunidades alineadas con tu talento real</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 shadow-lg text-white">
-              <h3 className="text-2xl font-bold mb-4">💡 ¿Por qué ahora?</h3>
-              <p className="mb-4 text-purple-50 leading-relaxed">
-                Mientras más temprano empieces a construir tu perfil, más completo estará cuando lo necesites.
-              </p>
-              <div className="space-y-3 text-purple-50">
-                <p className="flex items-start">
-                  <span className="text-2xl mr-3">📚</span>
-                  <span>En 1er año: Documenta tus primeros proyectos académicos</span>
-                </p>
-                <p className="flex items-start">
-                  <span className="text-2xl mr-3">🎓</span>
-                  <span>En 3er año: Tienes un portafolio completo y red de contactos</span>
-                </p>
-                <p className="flex items-start">
-                  <span className="text-2xl mr-3">💼</span>
-                  <span>Al graduarte: Destacas inmediatamente ante empleadores</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <a 
-              href="#waitlist" 
-              className="inline-flex items-center px-8 py-4 bg-purple-600 text-white rounded-xl font-bold text-lg hover:bg-purple-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
-            >
-              Únete a la Waitlist de Estudiantes
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </SectionWithAnimation>
-
-      {/* Para Universidades */}
-      <SectionWithAnimation id="universidades" className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-6 shadow-lg">
-              <Building2 className="w-9 h-9 text-white" />
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
-              Para Universidades
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Potencia la empleabilidad de tu institución y destaca el talento de tus estudiantes
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">📊 Visibilidad de Resultados</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Muestra al mundo el verdadero impacto de tu educación a través de los perfiles de tus estudiantes.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Showcase institucional con proyectos destacados</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Métricas de empleabilidad en tiempo real</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Historias de éxito de egresados documentadas</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🤝 Red Alumni Activa</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Crea una comunidad donde egresados exitosos mentorean a estudiantes actuales, fortaleciendo tu red institucional.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Conecta estudiantes con alumni por carrera e industria</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Programas de mentoría integrados en la plataforma</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Engagement continuo con tu comunidad egresada</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">💼 Conexión con Empleadores</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Las empresas buscan talento directamente en tu institución, aumentando las oportunidades para tus estudiantes.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Empresas acceden a perfiles validados por tu institución</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Tracking de colocación laboral de egresados</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Ferias de empleo virtuales integradas</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 shadow-lg text-white">
-              <h3 className="text-2xl font-bold mb-4">🎯 Diferenciación Competitiva</h3>
-              <p className="mb-4 text-blue-50 leading-relaxed">
-                En un mercado educativo competitivo, la empleabilidad de tus egresados es tu mejor carta de presentación.
-              </p>
-              <div className="space-y-3 text-blue-50">
-                <p className="flex items-start">
-                  <span className="text-2xl mr-3">📈</span>
-                  <span>Mejora tus rankings de empleabilidad</span>
-                </p>
-                <p className="flex items-start">
-                  <span className="text-2xl mr-3">🌟</span>
-                  <span>Atrae mejores estudiantes con casos de éxito reales</span>
-                </p>
-                <p className="flex items-start">
-                  <span className="text-2xl mr-3">🔗</span>
-                  <span>Fortalece vínculos con el sector empresarial</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <a 
-              href="#waitlist" 
-              className="inline-flex items-center px-8 py-4 bg-blue-600 text-white rounded-xl font-bold text-lg hover:bg-blue-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
-            >
-              Agenda una Demo para tu Universidad
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </SectionWithAnimation>
-
-      {/* Para Empresas */}
-      <SectionWithAnimation id="empresas" className="py-24 bg-gradient-to-br from-green-50 via-white to-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mb-6 shadow-lg">
-              <Briefcase className="w-9 h-9 text-white" />
-            </div>
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
-              Para Empresas
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Descubre y recluta talento joven validado institucionalmente
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Reclutamiento Inteligente</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Busca candidatos por proyectos reales, habilidades demostradas y fit cultural, no solo por palabras clave en un CV.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Filtros por proyectos específicos y habilidades validadas</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Perfiles verificados por instituciones educativas</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Ve el trabajo real antes de la entrevista</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">⚡ Acceso Anticipado</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                No esperes a que se gradúen. Identifica talento prometedor desde etapas tempranas y conviértete en su primera opción.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Programa de pasantías con estudiantes destacados</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Marca empleadora visible para nuevas generaciones</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Pipeline de talento continuo</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">💰 Reducción de Costos</h3>
-              <p className="text-gray-600 mb-4 leading-relaxed">
-                Menos tiempo y recursos invertidos en procesos de selección. Mejor calidad de candidatos desde el primer filtro.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Reduce tiempo de screening en 70%</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Mayor retención por mejor fit inicial</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Elimina intermediarios costosos</span>
-                </li>
-              </ul>
-            </div>
-
-            <div className="bg-gradient-to-br from-green-500 to-green-600 rounded-2xl p-8 shadow-lg text-white">
-              <h3 className="text-2xl font-bold mb-4">🚀 El futuro del reclutamiento</h3>
-              <p className="mb-4 text-green-50 leading-relaxed">
-                Las nuevas generaciones buscan empresas que valoren su trabajo real, no solo títulos y notas.
-              </p>
-              <div className="space-y-3 text-green-50">
-                <p className="flex items-start">
-                  <span className="text-2xl mr-3">🎓</span>
-                  <span>Acceso directo a las mejores universidades</span>
-                </p>
-                <p className="flex items-start">
-                  <span className="text-2xl mr-3">✨</span>
-                  <span>Candidatos pre-validados institucionalmente</span>
-                </p>
-                <p className="flex items-start">
-                  <span className="text-2xl mr-3">🤝</span>
-                  <span>Construye relaciones de largo plazo con el talento</span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="text-center">
-            <a 
-              href="#waitlist" 
-              className="inline-flex items-center px-8 py-4 bg-green-600 text-white rounded-xl font-bold text-lg hover:bg-green-700 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform"
-            >
-              Solicita Acceso Empresarial
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-          </div>
-        </div>
-      </SectionWithAnimation>
-
-      {/* La Solución / Demo */}
-      <SectionWithAnimation id="demo" className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-8 tracking-tight">
-              Prisma: Tu perfil profesional que evoluciona contigo
-            </h2>
-            <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-700 leading-relaxed">
-              <p>
-                Prisma es más que un portfolio. Es tu identidad profesional completa: tus proyectos, habilidades, experiencias, intereses y conexiones, todo en un solo lugar.
-              </p>
-              <p>
-                Desde tu primer año universitario hasta tu primer empleo, Prisma crece contigo. Muestra tu trabajo real, no solo tus notas. Conecta con compañeros para colaborar. Encuentra mentores alumni. Y cuando llegue el momento, destaca ante empresas que buscan exactamente lo que tú tienes.
-              </p>
-            </div>
-          </div>
-
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 max-w-4xl mx-auto">
-            <a 
-              href="https://sled-pixel-99459018.figma.site/" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="block bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] group cursor-pointer overflow-hidden"
-            >
-              <img 
-                src={demoImage} 
-                alt="Demo Interactivo de Prisma" 
-                className="w-full h-auto object-cover group-hover:opacity-90 transition-opacity duration-300"
-              />
-            </a>
-            <p className="text-center text-gray-600 mt-4 text-sm font-medium">
-              Haz click en la imagen para ver cómo funciona
-            </p>
-              </div>
-            </div>
-      </SectionWithAnimation>
-
-      {/* Características */}
-      <SectionWithAnimation className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 text-center mb-16 tracking-tight">
-            Todo lo que necesitas para destacar
-          </h2>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                icon: Briefcase,
-                title: 'Portfolio Multimedia',
-                desc: 'Proyectos, trabajos y casos con contexto real, no solo títulos en un CV'
-              },
-              {
-                icon: Users,
-                title: 'Networking Alumni',
-                desc: 'Conecta con mentores y descubre oportunidades a través de tu red universitaria'
-              },
-              {
-                icon: Search,
-                title: 'Búsqueda Inteligente',
-                desc: 'Encuentra colaboradores para proyectos o arma tu equipo emprendedor'
-              },
-              {
-                icon: CheckCircle,
-                title: 'Validación Institucional',
-                desc: 'Tu trabajo respaldado por tu universidad genera confianza real'
-              },
-              {
-                icon: Globe,
-                title: 'Visibilidad Empresarial',
-                desc: 'Empresas te descubren por tu trabajo real, no solo por palabras clave'
-              },
-              {
-                icon: TrendingUp,
-                title: 'Crecimiento Continuo',
-                desc: 'Tu perfil evoluciona desde primer año hasta tu carrera profesional'
-              }
-            ].map((feature, idx) => (
-              <div key={idx} className="group bg-white rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300">
-                  <feature.icon className="w-7 h-7 text-purple-600" />
-                </div>
-                <h3 className="font-bold text-gray-900 mb-3 text-lg">{feature.title}</h3>
-                <p className="text-gray-600 text-sm leading-relaxed">{feature.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </SectionWithAnimation>
-
       {/* Cómo Funciona - El Efecto de Red */}
       <SectionWithAnimation className="py-24 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -871,79 +443,45 @@ const PrismaLanding = () => {
         </div>
       </SectionWithAnimation>
 
-      {/* Valor para Stakeholders */}
-      <SectionWithAnimation className="py-24 bg-gradient-to-br from-purple-50 to-pink-50">
+      {/* La Solución / Demo */}
+      <SectionWithAnimation id="demo" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 text-center mb-16 tracking-tight">
-            Todos ganan con Prisma
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <GraduationCap className="w-7 h-7 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-5">Para Estudiantes</h3>
-              <ul className="space-y-3">
-                {[
-                  'Portfolio desde día 1',
-                  'Conexiones reales con alumni',
-                  'Visibilidad ante empresas',
-                  'Encuentra colaboradores'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <Building2 className="w-7 h-7 text-blue-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-5">Para Universidades</h3>
-              <ul className="space-y-3">
-                {[
-                  'Showcase de talento institucional',
-                  'Alumni engagement activo',
-                  'Métricas de empleabilidad',
-                  'Diferenciación competitiva'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-              <div className="w-14 h-14 bg-gradient-to-br from-green-100 to-emerald-100 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <Briefcase className="w-7 h-7 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-5">Para Empresas</h3>
-              <ul className="space-y-3">
-                {[
-                  'Acceso a talento curado',
-                  'Ves trabajo real, no solo CVs',
-                  'Conecta con talento temprano',
-                  'Filtros por skills reales'
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <CheckCircle className="w-5 h-5 text-green-500 mr-2 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-700">{item}</span>
-                  </li>
-                ))}
-              </ul>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-8 tracking-tight">
+              Prisma: Tu perfil profesional que evoluciona contigo
+            </h2>
+            <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-700 leading-relaxed">
+              <p>
+                Prisma es más que un portfolio. Es tu identidad profesional completa: tus proyectos, habilidades, experiencias, intereses y conexiones, todo en un solo lugar.
+              </p>
+              <p>
+                Desde tu primer año universitario hasta tu primer empleo, Prisma crece contigo. Muestra tu trabajo real, no solo tus notas. Conecta con compañeros para colaborar. Encuentra mentores alumni. Y cuando llegue el momento, destaca ante empresas que buscan exactamente lo que tú tienes.
+              </p>
             </div>
           </div>
-        </div>
+
+          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 max-w-4xl mx-auto">
+            <a 
+              href="https://sled-pixel-99459018.figma.site/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] group cursor-pointer overflow-hidden"
+            >
+              <img 
+                src={demoImage} 
+                alt="Demo Interactivo de Prisma" 
+                className="w-full h-auto object-cover group-hover:opacity-90 transition-opacity duration-300"
+              />
+            </a>
+            <p className="text-center text-gray-600 mt-4 text-sm font-medium">
+              Haz click en la imagen para ver cómo funciona
+            </p>
+              </div>
+            </div>
       </SectionWithAnimation>
 
       {/* Casos de Uso */}
-      <SectionWithAnimation className="py-24 bg-white">
+      <SectionWithAnimation className="py-24 bg-gradient-to-br from-purple-50 to-pink-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 text-center mb-6 tracking-tight">
             Historias que queremos hacer realidad
@@ -953,7 +491,7 @@ const PrismaLanding = () => {
           </p>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="group bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-purple-100">
+            <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-purple-200">
               <div className="flex items-center mb-5">
                 <div className="w-14 h-14 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl">👩‍💻</span>
@@ -965,7 +503,7 @@ const PrismaLanding = () => {
               </p>
             </div>
 
-            <div className="group bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-100">
+            <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-200">
               <div className="flex items-center mb-5">
                 <div className="w-14 h-14 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl">🚀</span>
@@ -975,6 +513,252 @@ const PrismaLanding = () => {
               <p className="text-gray-700 leading-relaxed">
                 Se conocieron en Prisma buscando colaboradores para un proyecto. Hoy tienen una startup financiada que nació de esa conexión.
               </p>
+            </div>
+          </div>
+        </div>
+      </SectionWithAnimation>
+
+      {/* Para Estudiantes */}
+      <SectionWithAnimation id="estudiantes" className="py-24 bg-gradient-to-br from-purple-50 via-white to-purple-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl mb-6 shadow-lg">
+              <GraduationCap className="w-9 h-9 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+              Para Estudiantes
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Construye tu identidad profesional desde el primer día universitario
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Tu Portfolio Vivo</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Cada proyecto, trabajo o experiencia queda documentada con contexto real. No más CVs genéricos que no muestran tu verdadero talento.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Sube proyectos con imágenes, videos y descripción detallada</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Muestra tu proceso de trabajo, no solo el resultado final</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Valida tus habilidades con certificaciones y proyectos reales</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🤝 Conecta y Colabora</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Encuentra compañeros para ese proyecto que tienes en mente, conecta con alumni que ya están donde quieres estar, y construye tu red profesional desde la universidad.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Busca colaboradores por habilidades específicas</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Conecta con mentores alumni de tu universidad</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Arma equipos para proyectos emprendedores</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Destaca Ante Empresas</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Cuando llegue el momento de buscar oportunidades laborales, tu perfil en Prisma habla por ti. Las empresas ven tu trabajo real, no solo palabras en un CV.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Empresas te descubren por tu portafolio completo</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Tu universidad valida tu perfil, generando confianza</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Recibe oportunidades alineadas con tu talento real</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </SectionWithAnimation>
+
+      {/* Para Universidades */}
+      <SectionWithAnimation id="universidades" className="py-24 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl mb-6 shadow-lg">
+              <Building2 className="w-9 h-9 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+              Para Universidades
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Potencia la empleabilidad de tu institución y destaca el talento de tus estudiantes
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">📊 Visibilidad de Resultados</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Muestra al mundo el verdadero impacto de tu educación a través de los perfiles de tus estudiantes.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Showcase institucional con proyectos destacados</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Métricas de empleabilidad en tiempo real</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Historias de éxito de egresados documentadas</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🤝 Red Alumni Activa</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Crea una comunidad donde egresados exitosos mentorean a estudiantes actuales, fortaleciendo tu red institucional.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Conecta estudiantes con alumni por carrera e industria</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Programas de mentoría integrados en la plataforma</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Engagement continuo con tu comunidad egresada</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-blue-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">💼 Conexión con Empleadores</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Las empresas buscan talento directamente en tu institución, aumentando las oportunidades para tus estudiantes.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Empresas acceden a perfiles validados por tu institución</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Tracking de colocación laboral de egresados</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Ferias de empleo virtuales integradas</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </SectionWithAnimation>
+
+      {/* Para Empresas */}
+      <SectionWithAnimation id="empresas" className="py-24 bg-gradient-to-br from-green-50 via-white to-green-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mb-6 shadow-lg">
+              <Briefcase className="w-9 h-9 text-white" />
+            </div>
+            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
+              Para Empresas
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+              Descubre y recluta talento joven validado institucionalmente
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Reclutamiento Inteligente</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Busca candidatos por proyectos reales, habilidades demostradas y fit cultural, no solo por palabras clave en un CV.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Filtros por proyectos específicos y habilidades validadas</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Perfiles verificados por instituciones educativas</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Ve el trabajo real antes de la entrevista</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">⚡ Acceso Anticipado</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                No esperes a que se gradúen. Identifica talento prometedor desde etapas tempranas y conviértete en su primera opción.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Programa de pasantías con estudiantes destacados</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Marca empleadora visible para nuevas generaciones</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Pipeline de talento continuo</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">💰 Reducción de Costos</h3>
+              <p className="text-gray-600 mb-4 leading-relaxed">
+                Menos tiempo y recursos invertidos en procesos de selección. Mejor calidad de candidatos desde el primer filtro.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Reduce tiempo de screening en 70%</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Mayor retención por mejor fit inicial</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <span className="text-gray-700">Elimina intermediarios costosos</span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
