@@ -233,7 +233,7 @@ const PrismaLanding = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-5xl mx-auto">
             <h1 className="text-5xl lg:text-7xl font-extrabold text-white mb-8 leading-tight tracking-tight">
-              Tu talento universitario merece más que un CV de una página
+              Tu experiencia universitaria merece más que un CV de una página
             </h1>
             <p className="text-xl lg:text-2xl text-purple-50 mb-10 leading-relaxed max-w-3xl mx-auto">
               Prisma es la plataforma donde estudiantes universitarios construyen perfiles profesionales integrales, conectan con oportunidades reales, y encuentran colaboradores para crear juntos.
