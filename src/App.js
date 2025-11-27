@@ -267,58 +267,13 @@ const PrismaLanding = () => {
         </div>
       </section>
 
-      {/* El Problema */}
-      <SectionWithAnimation className="py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
-              El talento se pierde cuando solo importan las notas
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Hay talento increíble en universidades, pero se pierde porque no existe una forma estructurada de mostrarlo.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            <div className="group bg-white rounded-2xl p-8 shadow-md border-2 border-purple-100 hover:border-purple-300 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-purple-100 to-purple-200 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <GraduationCap className="w-7 h-7 text-purple-600" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-3 text-xl">Estudiantes</h3>
-              <p className="text-gray-600 leading-relaxed">
-                "Hice 6 proyectos increíbles pero solo tengo un CV genérico que no muestra mi trabajo real"
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-8 shadow-md border-2 border-blue-100 hover:border-blue-300 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-blue-100 to-blue-200 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <Building2 className="w-7 h-7 text-blue-600" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-3 text-xl">Universidades</h3>
-              <p className="text-gray-600 leading-relaxed">
-                "Queremos que nuestros egresados destaquen, pero no tenemos forma de mostrar su talento"
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-8 shadow-md border-2 border-green-100 hover:border-green-300 hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-green-100 to-green-200 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300">
-                <Briefcase className="w-7 h-7 text-green-600" />
-              </div>
-              <h3 className="font-bold text-gray-900 mb-3 text-xl">Empresas</h3>
-              <p className="text-gray-600 leading-relaxed">
-                "Buscamos talento joven pero los CVs no nos dicen quiénes son realmente ni qué saben hacer"
-              </p>
-            </div>
-          </div>
-        </div>
-      </SectionWithAnimation>
 
       {/* Cómo Funciona - El Efecto de Red */}
       <SectionWithAnimation className="py-24 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
-              El Poder del Efecto de Red de 3 Lados
+              El talento se pierde cuando solo importan las notas
           </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Prisma crea valor para todos conectando a los actores clave del ecosistema universitario-laboral
@@ -405,39 +360,161 @@ const PrismaLanding = () => {
             </div>
 
             {/* El ciclo virtuoso */}
-            <div className="bg-gradient-to-br from-purple-600 via-blue-600 to-green-600 rounded-2xl p-8 text-white shadow-2xl">
-              <h3 className="text-2xl font-bold text-center mb-6">El Ciclo Virtuoso de Prisma</h3>
-              <div className="grid md:grid-cols-3 gap-6 text-sm">
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3 backdrop-blur-sm">
-                    <span className="text-2xl font-bold">1</span>
+          <div className="rounded-2xl p-6 md:p-8">
+              <h3 className="text-2xl font-bold text-center mb-6 text-gray-900">El Ciclo Virtuoso de Prisma</h3>
+              
+              {/* Contenedor del círculo con SVG - Desktop */}
+              <div className="hidden md:block relative w-full max-w-2xl mx-auto" style={{ minHeight: '420px' }}>
+                {/* SVG para las líneas curvas del ciclo */}
+                <svg className="absolute inset-0 w-full h-full" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    {/* Definir el marcador de flecha */}
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" fill="rgba(75, 85, 99, 0.7)">
+                      <polygon points="0 0, 10 3, 0 6" />
+                    </marker>
+                  </defs>
+                  
+                  {/* Círculo central de referencia */}
+                  <circle cx="300" cy="210" r="95" fill="none" stroke="rgba(156, 163, 175, 0.3)" strokeWidth="2" strokeDasharray="5,5" />
+                  
+                  {/* Línea curva: Estudiantes (arriba) → Universidades (abajo izq) */}
+                  <path
+                    d="M 300 50 Q 170 120, 150 280"
+                    fill="none"
+                    stroke="rgba(147, 51, 234, 0.5)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    markerEnd="url(#arrowhead)"
+                  />
+                  
+                  {/* Línea curva: Universidades (abajo izq) → Empresas (abajo der) */}
+                  <path
+                    d="M 180 310 Q 300 370, 420 310"
+                    fill="none"
+                    stroke="rgba(59, 130, 246, 0.5)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    markerEnd="url(#arrowhead)"
+                  />
+                  
+                  {/* Línea curva: Empresas (abajo der) → Estudiantes (arriba) */}
+                  <path
+                    d="M 450 280 Q 430 120, 300 50"
+                    fill="none"
+                    stroke="rgba(34, 197, 94, 0.5)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                    markerEnd="url(#arrowhead)"
+                  />
+                </svg>
+
+                {/* Círculo central */}
+                <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-gray-50 to-gray-100 rounded-full flex items-center justify-center border-2 border-gray-300 shadow-xl z-20">
+                  <div className="text-center">
+                    <div className="text-2xl mb-0.5">🔄</div>
+                    <div className="text-[10px] font-bold leading-tight text-gray-700">Efecto<br/>de Red</div>
                   </div>
-                  <p className="leading-relaxed">
-                    <strong>Más estudiantes</strong> crean perfiles → más valor para universidades (showcase de talento)
-                  </p>
                 </div>
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3 backdrop-blur-sm">
-                    <span className="text-2xl font-bold">2</span>
+
+                {/* Estudiantes - Arriba (posición: top center) */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-48 z-30" style={{ top: '10px' }}>
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-3.5 border-2 border-purple-300 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mb-2 shadow-md">
+                        <GraduationCap className="w-6 h-6 text-white" />
+                      </div>
+                      <p className="text-sm font-bold mb-1 text-gray-900">Estudiantes</p>
+                      <p className="text-[11px] leading-snug text-gray-700">
+                        Crean perfiles → <strong>más valor para universidades</strong>
+                      </p>
+                    </div>
                   </div>
-                  <p className="leading-relaxed">
-                    <strong>Más universidades</strong> validan → más confianza para empresas (perfiles verificados)
-                  </p>
                 </div>
-                <div className="flex flex-col items-center text-center">
-                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mb-3 backdrop-blur-sm">
-                    <span className="text-2xl font-bold">3</span>
+
+                {/* Universidades - Abajo Izquierda */}
+                <div className="absolute z-30" style={{ bottom: '15px', left: '40px', width: '190px' }}>
+                  <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-3.5 border-2 border-blue-300 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mb-2 shadow-md">
+                        <Building2 className="w-6 h-6 text-white" />
+                      </div>
+                      <p className="text-sm font-bold mb-1 text-gray-900">Universidades</p>
+                      <p className="text-[11px] leading-snug text-gray-700">
+                        Validan → <strong>más confianza para empresas</strong>
+                      </p>
+                    </div>
                   </div>
-                  <p className="leading-relaxed">
-                    <strong>Más empresas</strong> buscan talento → más oportunidades para estudiantes
-                  </p>
+                </div>
+
+                {/* Empresas - Abajo Derecha */}
+                <div className="absolute z-30" style={{ bottom: '15px', right: '40px', width: '190px' }}>
+                  <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-3.5 border-2 border-green-300 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-2 shadow-md">
+                        <Briefcase className="w-6 h-6 text-white" />
+                      </div>
+                      <p className="text-sm font-bold mb-1 text-gray-900">Empresas</p>
+                      <p className="text-[11px] leading-snug text-gray-700">
+                        Buscan talento → <strong>más oportunidades para estudiantes</strong>
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div className="mt-8 text-center">
-                <p className="text-lg font-semibold text-white/90">
-                  ↻ Y el ciclo se fortalece continuamente
-                </p>
+
+              {/* Vista Mobile - Versión vertical */}
+              <div className="md:hidden space-y-3">
+                <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-4 border-2 border-purple-300 shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                      <GraduationCap className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-sm mb-0.5 text-gray-900">Estudiantes</p>
+                      <p className="text-xs leading-relaxed text-gray-700">Crean perfiles → <strong>más valor</strong></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex justify-center">
+                  <div className="text-4xl text-gray-400">↓</div>
+                </div>
+                
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 border-2 border-blue-300 shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                      <Building2 className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-sm mb-0.5 text-gray-900">Universidades</p>
+                      <p className="text-xs leading-relaxed text-gray-700">Validan → <strong>más confianza</strong></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex justify-center">
+                  <div className="text-4xl text-gray-400">↓</div>
+                </div>
+                
+                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border-2 border-green-300 shadow-lg">
+                  <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                      <Briefcase className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-bold text-sm mb-0.5 text-gray-900">Empresas</p>
+                      <p className="text-xs leading-relaxed text-gray-700">Buscan talento → <strong>más oportunidades</strong></p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="text-center pt-1">
+                  <div className="text-4xl text-gray-400 mb-2">🔄</div>
+                  <p className="text-xs font-semibold text-gray-700">Y el ciclo se fortalece continuamente</p>
+                </div>
               </div>
+
+
             </div>
           </div>
         </div>
@@ -535,7 +612,7 @@ const PrismaLanding = () => {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Tu Portfolio Vivo</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Tu Perfil Vivo</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Cada proyecto, trabajo o experiencia queda documentada con contexto real. No más CVs genéricos que no muestran tu verdadero talento.
               </p>
@@ -1020,7 +1097,7 @@ const PrismaLanding = () => {
           </div>
 
           <div className="border-t border-gray-800 pt-8 text-center text-gray-400 text-sm">
-            <p>© 2024 Prisma. Todos los derechos reservados.</p>
+            <p>© 2025 Prisma. Todos los derechos reservados.</p>
             <p className="mt-2">Construido con ❤️ por alumni universitarios para la próxima generación</p>
           </div>
         </div>
