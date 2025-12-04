@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Briefcase, Users, Search, CheckCircle, Globe, TrendingUp, ChevronDown, GraduationCap, Building2, ArrowRight, Mail, Menu, X } from 'lucide-react';
 import './App.css';
-import demoImage from './assets/prisma-ej.png';
+import demoImage from './assets/Prisma Profile Ex.png';
 import prismaLogo from './assets/logo-prisma.PNG';
 
 // Custom hook for scroll animations
@@ -538,7 +538,7 @@ const PrismaLanding = () => {
 
           <div className="bg-gradient-to-br from-purple-50 to-cyan-50 rounded-2xl p-8 max-w-4xl mx-auto">
             <a
-              href="https://sled-pixel-99459018.figma.site/"
+              href="https://demo.tuprisma.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="block bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] group cursor-pointer overflow-hidden"
