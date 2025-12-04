@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Briefcase, Users, Search, CheckCircle, Globe, TrendingUp, ChevronDown, GraduationCap, Building2, ArrowRight, Mail, Menu, X } from 'lucide-react';
 import './App.css';
 import demoImage from './assets/prisma-ej.png';
+import prismaLogo from './assets/logo-prisma.PNG';
 
 // Custom hook for scroll animations
 const useScrollAnimation = (options = {}) => {
@@ -45,7 +46,7 @@ const useScrollAnimation = (options = {}) => {
 // Component wrapper for sections with scroll animation
 const SectionWithAnimation = ({ children, className = '', id, ...props }) => {
   const [ref, isVisible] = useScrollAnimation();
-  
+
   return (
     <section
       ref={ref}
@@ -93,23 +94,23 @@ const PrismaLanding = () => {
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 animate-fade-in">
           {/* Overlay */}
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-          
+
           {/* Modal */}
           <div className="relative bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl transform animate-scale-in">
             {/* Icono de éxito */}
             <div className="flex justify-center mb-6">
-              <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center animate-bounce-once">
+              <div className="w-20 h-20 bg-gradient-to-br from-cyan-400 to-cyan-600 rounded-full flex items-center justify-center animate-bounce-once">
                 <CheckCircle className="w-12 h-12 text-white" />
               </div>
             </div>
-            
+
             {/* Contenido */}
             <div className="text-center mb-6">
               <h3 className="text-3xl font-bold text-gray-900 mb-3">
                 ¡Registro Exitoso! 🎉
               </h3>
               <p className="text-lg text-gray-600 leading-relaxed">
-                Gracias por unirte a la lista de espera de <span className="font-semibold text-purple-600">Prisma</span>.
+                Gracias por unirte a la lista de espera de <span className="font-semibold text-cyan-600">Prisma</span>.
               </p>
               <p className="text-gray-600 mt-3">
                 Te contactaremos pronto con novedades sobre el lanzamiento de la beta.
@@ -122,7 +123,7 @@ const PrismaLanding = () => {
                 setShowSuccess(false);
                 window.history.replaceState({}, document.title, window.location.pathname);
               }}
-              className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-3 rounded-xl font-bold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+              className="w-full bg-gradient-to-r from-purple-700 to-cyan-500 text-white py-3 rounded-xl font-bold text-lg hover:from-purple-800 hover:to-cyan-600 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
             >
               ¡Entendido!
             </button>
@@ -143,37 +144,35 @@ const PrismaLanding = () => {
       <header className="bg-white border-b border-gray-200 sticky top-0 z-50 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-3">
-              <div className="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">P</span>
-              </div>
-              <div>
-                <h1 className="text-xl font-bold text-gray-900">Prisma</h1>
-                <p className="text-xs text-gray-500">Donde el talento encuentra su luz</p>
-              </div>
+            <div className="flex items-center">
+              <img
+                src={prismaLogo}
+                alt="Prisma - Donde el talento encuentra su luz"
+                className="h-12 w-auto"
+              />
             </div>
-            
+
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-6">
-              <a href="#estudiantes" className="text-sm font-medium text-gray-600 hover:text-purple-600 transition-colors">
+              <a href="#estudiantes" className="text-base font-medium text-gray-600 hover:text-purple-700 transition-colors">
                 Estudiantes
               </a>
-              <a href="#universidades" className="text-sm font-medium text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="#universidades" className="text-base font-medium text-gray-600 hover:text-cyan-600 transition-colors">
                 Universidades
               </a>
-              <a href="#empresas" className="text-sm font-medium text-gray-600 hover:text-green-600 transition-colors">
+              <a href="#empresas" className="text-base font-medium text-gray-600 hover:text-teal-600 transition-colors">
                 Empresas
               </a>
-              <a 
-                href="#waitlist" 
-                className="px-6 py-2 bg-purple-600 text-white rounded-xl hover:bg-purple-700 transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
+              <a
+                href="#waitlist"
+                className="px-6 py-2 bg-gradient-to-r from-purple-700 to-cyan-500 text-white rounded-xl hover:from-purple-800 hover:to-cyan-600 transition-all duration-300 font-semibold shadow-md hover:shadow-lg transform hover:scale-105"
               >
                 Únete
               </a>
             </nav>
 
             {/* Mobile Menu Button */}
-            <button 
+            <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="md:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
               aria-label="Toggle menu"
@@ -189,31 +188,31 @@ const PrismaLanding = () => {
           {/* Mobile Menu Dropdown */}
           {mobileMenuOpen && (
             <nav className="md:hidden mt-4 pb-4 space-y-3 animate-fade-in">
-              <a 
-                href="#estudiantes" 
+              <a
+                href="#estudiantes"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block px-4 py-3 text-center font-medium text-gray-700 bg-purple-50 hover:bg-purple-100 rounded-xl transition-colors border border-purple-200"
               >
                 🎓 Estudiantes
               </a>
-              <a 
-                href="#universidades" 
+              <a
+                href="#universidades"
                 onClick={() => setMobileMenuOpen(false)}
                 className="block px-4 py-3 text-center font-medium text-gray-700 bg-blue-50 hover:bg-blue-100 rounded-xl transition-colors border border-blue-200"
               >
                 🏛️ Universidades
               </a>
-              <a 
-                href="#empresas" 
+              <a
+                href="#empresas"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-4 py-3 text-center font-medium text-gray-700 bg-green-50 hover:bg-green-100 rounded-xl transition-colors border border-green-200"
+                className="block px-4 py-3 text-center font-medium text-gray-700 bg-cyan-50 hover:bg-cyan-100 rounded-xl transition-colors border border-cyan-200"
               >
                 💼 Empresas
               </a>
-              <a 
-                href="#waitlist" 
+              <a
+                href="#waitlist"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block px-4 py-3 text-center font-bold text-white bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 rounded-xl transition-all shadow-md"
+                className="block px-4 py-3 text-center font-bold text-white bg-gradient-to-r from-purple-700 to-cyan-500 hover:from-purple-800 hover:to-cyan-600 rounded-xl transition-all shadow-md"
               >
                 Únete a la Waitlist
               </a>
@@ -223,7 +222,7 @@ const PrismaLanding = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 py-24 lg:py-40 overflow-hidden hero-fade-in">
+      <section className="relative bg-gradient-to-br from-purple-800 via-purple-700 to-cyan-500 py-24 lg:py-40 overflow-hidden hero-fade-in">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, white 1px, transparent 0)`,
@@ -239,27 +238,27 @@ const PrismaLanding = () => {
               Prisma es la plataforma donde estudiantes universitarios construyen perfiles profesionales integrales, conectan con oportunidades reales, y encuentran colaboradores para crear juntos.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
-              <a 
+              <a
                 href="#waitlist"
-                className="group px-8 py-4 bg-white text-purple-600 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform flex items-center justify-center"
+                className="group px-8 py-4 bg-white text-purple-700 rounded-xl font-bold text-lg hover:bg-gray-50 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105 transform flex items-center justify-center"
               >
                 Únete a la Lista de Espera
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
-              <a 
+              <a
                 href="#demo"
-                className="px-8 py-4 bg-purple-500/90 backdrop-blur-sm text-white rounded-xl font-bold text-lg hover:bg-purple-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform border-2 border-white/20"
+                className="px-8 py-4 bg-cyan-500/90 backdrop-blur-sm text-white rounded-xl font-bold text-lg hover:bg-cyan-400 transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 transform border-2 border-white/20"
               >
                 Ver Cómo Funciona
               </a>
             </div>
             <div className="flex flex-wrap justify-center gap-6 text-purple-50 text-sm">
               <span className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <CheckCircle className="w-5 h-5 mr-2 text-green-300" />
+                <CheckCircle className="w-5 h-5 mr-2 text-cyan-300" />
                 Sin costo para early adopters
               </span>
               <span className="flex items-center bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full">
-                <CheckCircle className="w-5 h-5 mr-2 text-green-300" />
+                <CheckCircle className="w-5 h-5 mr-2 text-cyan-300" />
                 Acceso exclusivo a beta
               </span>
             </div>
@@ -274,7 +273,7 @@ const PrismaLanding = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
               El talento se pierde cuando solo importan las notas
-          </h2>
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Prisma crea valor para todos conectando a los actores clave del ecosistema universitario-laboral
             </p>
@@ -296,16 +295,16 @@ const PrismaLanding = () => {
                   <div className="flex items-center">
                     <ArrowRight className="w-4 h-4 text-purple-600 mr-2" />
                     <span>Documentan proyectos</span>
-                </div>
+                  </div>
                   <div className="flex items-center">
                     <ArrowRight className="w-4 h-4 text-purple-600 mr-2" />
                     <span>Conectan con alumni</span>
-              </div>
+                  </div>
                   <div className="flex items-center">
                     <ArrowRight className="w-4 h-4 text-purple-600 mr-2" />
                     <span>Acceden a oportunidades</span>
-          </div>
-        </div>
+                  </div>
+                </div>
               </div>
 
               {/* Universidades */}
@@ -334,8 +333,8 @@ const PrismaLanding = () => {
               </div>
 
               {/* Empresas */}
-              <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-green-200 transform transition-all hover:scale-105">
-                <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border-2 border-cyan-200 transform transition-all hover:scale-105">
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-4 mx-auto">
                   <Briefcase className="w-9 h-9 text-white" />
                 </div>
                 <h3 className="text-xl font-bold text-center text-gray-900 mb-3">Empresas</h3>
@@ -344,15 +343,15 @@ const PrismaLanding = () => {
                 </p>
                 <div className="space-y-2 text-xs text-gray-600">
                   <div className="flex items-center">
-                    <ArrowRight className="w-4 h-4 text-green-600 mr-2" />
+                    <ArrowRight className="w-4 h-4 text-cyan-600 mr-2" />
                     <span>Acceden a perfiles reales</span>
                   </div>
                   <div className="flex items-center">
-                    <ArrowRight className="w-4 h-4 text-green-600 mr-2" />
+                    <ArrowRight className="w-4 h-4 text-cyan-600 mr-2" />
                     <span>Reducen tiempo screening</span>
                   </div>
                   <div className="flex items-center">
-                    <ArrowRight className="w-4 h-4 text-green-600 mr-2" />
+                    <ArrowRight className="w-4 h-4 text-cyan-600 mr-2" />
                     <span>Mejoran contratación</span>
                   </div>
                 </div>
@@ -360,9 +359,9 @@ const PrismaLanding = () => {
             </div>
 
             {/* El ciclo virtuoso */}
-          <div className="rounded-2xl p-6 md:p-8">
+            <div className="rounded-2xl p-6 md:p-8">
               <h3 className="text-2xl font-bold text-center mb-6 text-gray-900">El Ciclo Virtuoso de Prisma</h3>
-              
+
               {/* Contenedor del círculo con SVG - Desktop */}
               <div className="hidden md:block relative w-full max-w-2xl mx-auto" style={{ minHeight: '420px' }}>
                 {/* SVG para las líneas curvas del ciclo */}
@@ -373,10 +372,10 @@ const PrismaLanding = () => {
                       <polygon points="0 0, 10 3, 0 6" />
                     </marker>
                   </defs>
-                  
+
                   {/* Círculo central de referencia */}
                   <circle cx="300" cy="210" r="95" fill="none" stroke="rgba(156, 163, 175, 0.3)" strokeWidth="2" strokeDasharray="5,5" />
-                  
+
                   {/* Línea curva: Estudiantes (arriba) → Universidades (abajo izq) */}
                   <path
                     d="M 300 50 Q 170 120, 150 280"
@@ -386,7 +385,7 @@ const PrismaLanding = () => {
                     strokeLinecap="round"
                     markerEnd="url(#arrowhead)"
                   />
-                  
+
                   {/* Línea curva: Universidades (abajo izq) → Empresas (abajo der) */}
                   <path
                     d="M 180 310 Q 300 370, 420 310"
@@ -396,12 +395,12 @@ const PrismaLanding = () => {
                     strokeLinecap="round"
                     markerEnd="url(#arrowhead)"
                   />
-                  
+
                   {/* Línea curva: Empresas (abajo der) → Estudiantes (arriba) */}
                   <path
                     d="M 450 280 Q 430 120, 300 50"
                     fill="none"
-                    stroke="rgba(34, 197, 94, 0.5)"
+                    stroke="rgba(0, 184, 200, 0.5)"
                     strokeWidth="3"
                     strokeLinecap="round"
                     markerEnd="url(#arrowhead)"
@@ -412,7 +411,7 @@ const PrismaLanding = () => {
                 <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 bg-gradient-to-br from-gray-50 to-gray-100 rounded-full flex items-center justify-center border-2 border-gray-300 shadow-xl z-20">
                   <div className="text-center">
                     <div className="text-2xl mb-0.5">🔄</div>
-                    <div className="text-[10px] font-bold leading-tight text-gray-700">Efecto<br/>de Red</div>
+                    <div className="text-[10px] font-bold leading-tight text-gray-700">Efecto<br />de Red</div>
                   </div>
                 </div>
 
@@ -448,9 +447,9 @@ const PrismaLanding = () => {
 
                 {/* Empresas - Abajo Derecha */}
                 <div className="absolute z-30" style={{ bottom: '15px', right: '40px', width: '190px' }}>
-                  <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-3.5 border-2 border-green-300 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                  <div className="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-xl p-3.5 border-2 border-cyan-300 shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
                     <div className="flex flex-col items-center text-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mb-2 shadow-md">
+                      <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center mb-2 shadow-md">
                         <Briefcase className="w-6 h-6 text-white" />
                       </div>
                       <p className="text-sm font-bold mb-1 text-gray-900">Empresas</p>
@@ -475,11 +474,11 @@ const PrismaLanding = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex justify-center">
                   <div className="text-4xl text-gray-400">↓</div>
                 </div>
-                
+
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 border-2 border-blue-300 shadow-lg">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
@@ -491,14 +490,14 @@ const PrismaLanding = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="flex justify-center">
                   <div className="text-4xl text-gray-400">↓</div>
                 </div>
-                
-                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 border-2 border-green-300 shadow-lg">
+
+                <div className="bg-gradient-to-br from-cyan-50 to-cyan-100 rounded-xl p-4 border-2 border-cyan-300 shadow-lg">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                    <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
                       <Briefcase className="w-6 h-6 text-white" />
                     </div>
                     <div className="flex-1">
@@ -507,7 +506,7 @@ const PrismaLanding = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="text-center pt-1">
                   <div className="text-4xl text-gray-400 mb-2">🔄</div>
                   <p className="text-xs font-semibold text-gray-700">Y el ciclo se fortalece continuamente</p>
@@ -537,28 +536,28 @@ const PrismaLanding = () => {
             </div>
           </div>
 
-          <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-8 max-w-4xl mx-auto">
-            <a 
-              href="https://sled-pixel-99459018.figma.site/" 
-              target="_blank" 
+          <div className="bg-gradient-to-br from-purple-50 to-cyan-50 rounded-2xl p-8 max-w-4xl mx-auto">
+            <a
+              href="https://sled-pixel-99459018.figma.site/"
+              target="_blank"
               rel="noopener noreferrer"
               className="block bg-white rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-[1.02] group cursor-pointer overflow-hidden"
             >
-              <img 
-                src={demoImage} 
-                alt="Demo Interactivo de Prisma" 
+              <img
+                src={demoImage}
+                alt="Demo Interactivo de Prisma"
                 className="w-full h-auto object-cover group-hover:opacity-90 transition-opacity duration-300"
               />
             </a>
             <p className="text-center text-gray-600 mt-4 text-sm font-medium">
               Haz click en la imagen para ver cómo funciona
             </p>
-              </div>
-            </div>
+          </div>
+        </div>
       </SectionWithAnimation>
 
       {/* Casos de Uso */}
-      <SectionWithAnimation className="py-24 bg-gradient-to-br from-purple-50 to-pink-50">
+      <SectionWithAnimation className="py-24 bg-gradient-to-br from-purple-50 to-cyan-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 text-center mb-6 tracking-tight">
             Historias que queremos hacer realidad
@@ -570,7 +569,7 @@ const PrismaLanding = () => {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-purple-200">
               <div className="flex items-center mb-5">
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-purple-200 to-cyan-200 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl">👩‍💻</span>
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg">María, Ing. Informática</h3>
@@ -582,7 +581,7 @@ const PrismaLanding = () => {
 
             <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-200">
               <div className="flex items-center mb-5">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                <div className="w-14 h-14 bg-gradient-to-br from-cyan-200 to-purple-200 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
                   <span className="text-2xl">🚀</span>
                 </div>
                 <h3 className="font-bold text-gray-900 text-lg">Carlos & Ana, Co-founders</h3>
@@ -760,10 +759,10 @@ const PrismaLanding = () => {
       </SectionWithAnimation>
 
       {/* Para Empresas */}
-      <SectionWithAnimation id="empresas" className="py-24 bg-gradient-to-br from-green-50 via-white to-green-50">
+      <SectionWithAnimation id="empresas" className="py-24 bg-gradient-to-br from-cyan-50 via-white to-cyan-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mb-6 shadow-lg">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl mb-6 shadow-lg">
               <Briefcase className="w-9 h-9 text-white" />
             </div>
             <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 mb-6 tracking-tight">
@@ -775,64 +774,64 @@ const PrismaLanding = () => {
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto mb-12">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-cyan-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">🎯 Reclutamiento Inteligente</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Busca candidatos por proyectos reales, habilidades demostradas y fit cultural, no solo por palabras clave en un CV.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-600 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">Filtros por proyectos específicos y habilidades validadas</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-600 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">Perfiles verificados por instituciones educativas</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-600 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">Ve el trabajo real antes de la entrevista</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-cyan-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">⚡ Acceso Anticipado</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 No esperes a que se gradúen. Identifica talento prometedor desde etapas tempranas y conviértete en su primera opción.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-600 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">Programa de pasantías con estudiantes destacados</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-600 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">Marca empleadora visible para nuevas generaciones</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-600 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">Pipeline de talento continuo</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-green-100">
+            <div className="bg-white rounded-2xl p-8 shadow-lg border border-cyan-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">💰 Reducción de Costos</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
                 Menos tiempo y recursos invertidos en procesos de selección. Mejor calidad de candidatos desde el primer filtro.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-600 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">Reduce tiempo de screening en 70%</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-600 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">Mayor retención por mejor fit inicial</span>
                 </li>
                 <li className="flex items-start">
-                  <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
+                  <CheckCircle className="w-5 h-5 text-cyan-600 mr-3 mt-1 flex-shrink-0" />
                   <span className="text-gray-700">Elimina intermediarios costosos</span>
                 </li>
               </ul>
@@ -842,13 +841,13 @@ const PrismaLanding = () => {
       </SectionWithAnimation>
 
       {/* Waitlist */}
-      <SectionWithAnimation id="waitlist" className="py-24 bg-gradient-to-br from-purple-600 via-blue-600 to-pink-600">
+      <SectionWithAnimation id="waitlist" className="py-24 bg-gradient-to-br from-purple-800 via-purple-600 to-cyan-500">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl lg:text-5xl font-extrabold text-white mb-6 tracking-tight">
               Únete al Futuro del Talento Universitario
             </h2>
-            <p className="text-xl text-purple-50 leading-relaxed mb-6">
+            <p className="text-xl text-cyan-50 leading-relaxed mb-6">
               Estamos lanzando pronto. Sé parte de la comunidad que conecta estudiantes, universidades y empresas.
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-sm text-white/90">
@@ -865,21 +864,21 @@ const PrismaLanding = () => {
           </div>
 
           {showSuccess && (
-            <div className="mb-6 bg-green-50 border-2 border-green-500 rounded-xl p-6 animate-fade-in">
+            <div className="mb-6 bg-cyan-50 border-2 border-cyan-500 rounded-xl p-6 animate-fade-in">
               <div className="flex items-center">
-                <CheckCircle className="w-6 h-6 text-green-500 mr-3" />
+                <CheckCircle className="w-6 h-6 text-cyan-500 mr-3" />
                 <div>
-                  <h3 className="font-bold text-green-900 text-lg">¡Registro exitoso!</h3>
-                  <p className="text-green-700">Gracias por unirte a la lista de espera. Te contactaremos pronto.</p>
+                  <h3 className="font-bold text-cyan-900 text-lg">¡Registro exitoso!</h3>
+                  <p className="text-cyan-700">Gracias por unirte a la lista de espera. Te contactaremos pronto.</p>
                 </div>
               </div>
             </div>
           )}
 
-          <form 
-            action="https://formsubmit.co/contacto@tuprisma.com" 
+          <form
+            action="https://formsubmit.co/contacto@tuprisma.com"
             method="POST"
-            onSubmit={handleSubmit} 
+            onSubmit={handleSubmit}
             className="bg-white rounded-2xl p-8 shadow-2xl"
           >
             {/* Configuración de FormSubmit */}
@@ -887,7 +886,7 @@ const PrismaLanding = () => {
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="table" />
             <input type="hidden" name="_next" value={`${window.location.origin}${window.location.pathname}?success=true`} />
-            
+
             <div className="space-y-4">
               <div>
                 <label className="block text-gray-700 font-semibold mb-2">Nombre</label>
@@ -896,8 +895,8 @@ const PrismaLanding = () => {
                   name="nombre"
                   required
                   value={formData.name}
-                  onChange={(e) => setFormData({...formData, name: e.target.value})}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-gray-300"
+                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200 hover:border-gray-300"
                   placeholder="Tu nombre completo"
                 />
               </div>
@@ -909,8 +908,8 @@ const PrismaLanding = () => {
                   name="email"
                   required
                   value={formData.email}
-                  onChange={(e) => setFormData({...formData, email: e.target.value})}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-gray-300"
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200 hover:border-gray-300"
                   placeholder="tu@email.com"
                 />
               </div>
@@ -924,8 +923,8 @@ const PrismaLanding = () => {
                   type="text"
                   name="universidad"
                   value={formData.university}
-                  onChange={(e) => setFormData({...formData, university: e.target.value})}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-gray-300"
+                  onChange={(e) => setFormData({ ...formData, university: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200 hover:border-gray-300"
                   placeholder="Universidad de Chile, Nombre de tu empresa, etc."
                 />
               </div>
@@ -935,8 +934,8 @@ const PrismaLanding = () => {
                 <select
                   name="tipo"
                   value={formData.type}
-                  onChange={(e) => setFormData({...formData, type: e.target.value})}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-all duration-200 hover:border-gray-300 bg-white"
+                  onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-cyan-500 transition-all duration-200 hover:border-gray-300 bg-white"
                 >
                   <option value="estudiante">Estudiante</option>
                   <option value="alumni">Alumni</option>
@@ -948,7 +947,7 @@ const PrismaLanding = () => {
 
               <button
                 type="submit"
-                className="group w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white py-4 rounded-xl font-bold text-lg hover:from-purple-700 hover:to-pink-700 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
+                className="group w-full bg-gradient-to-r from-purple-700 to-cyan-500 text-white py-4 rounded-xl font-bold text-lg hover:from-purple-800 hover:to-cyan-600 transition-all duration-300 flex items-center justify-center shadow-lg hover:shadow-xl transform hover:scale-[1.02]"
               >
                 Únete a la Waitlist
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -957,7 +956,7 @@ const PrismaLanding = () => {
 
             <div className="mt-6 text-center text-sm text-gray-500">
               <p>Al registrarte, aceptas que nos comuniquemos contigo sobre Prisma.</p>
-              <p className="mt-2">Respetamos tu privacidad. No spam, lo prometemos. 💜</p>
+              <p className="mt-2">Respetamos tu privacidad. No spam, lo prometemos. 💎</p>
             </div>
           </form>
         </div>
@@ -1034,10 +1033,9 @@ const PrismaLanding = () => {
                   className="w-full px-6 py-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors duration-200 rounded-xl"
                 >
                   <span className="font-semibold text-gray-900 pr-8">{faq.q}</span>
-                  <ChevronDown 
-                    className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform ${
-                      openFaq === idx ? 'transform rotate-180' : ''
-                    }`}
+                  <ChevronDown
+                    className={`w-5 h-5 text-gray-500 flex-shrink-0 transition-transform ${openFaq === idx ? 'transform rotate-180' : ''
+                      }`}
                   />
                 </button>
                 {openFaq === idx && (
@@ -1056,11 +1054,12 @@ const PrismaLanding = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-8 h-8 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                  <span className="text-white font-bold">P</span>
-                </div>
-                <span className="font-bold text-xl">Prisma</span>
+              <div className="mb-4">
+                <img
+                  src={prismaLogo}
+                  alt="Prisma"
+                  className="h-10 w-auto brightness-0 invert"
+                />
               </div>
               <p className="text-gray-400 text-sm">
                 Donde el talento encuentra su luz
