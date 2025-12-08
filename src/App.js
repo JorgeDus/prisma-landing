@@ -147,7 +147,7 @@ const PrismaLanding = () => {
             <div className="flex items-center">
               <img
                 src={prismaLogo}
-                alt="Prisma - Donde el talento encuentra su luz"
+                alt="Prisma"
                 className="h-12 w-auto"
               />
             </div>
@@ -294,15 +294,15 @@ const PrismaLanding = () => {
                 <div className="space-y-2 text-xs text-gray-600">
                   <div className="flex items-center">
                     <ArrowRight className="w-4 h-4 text-purple-600 mr-2" />
-                    <span>Documentan proyectos</span>
+                    <span>Documentan experiencias, proyectos y portafolios</span>
                   </div>
                   <div className="flex items-center">
                     <ArrowRight className="w-4 h-4 text-purple-600 mr-2" />
-                    <span>Conectan con alumni</span>
+                    <span>Encuentran Co-founders y socios</span>
                   </div>
                   <div className="flex items-center">
                     <ArrowRight className="w-4 h-4 text-purple-600 mr-2" />
-                    <span>Acceden a oportunidades</span>
+                    <span>Conectan con oportunidades laborales</span>
                   </div>
                 </div>
               </div>
@@ -556,44 +556,6 @@ const PrismaLanding = () => {
         </div>
       </SectionWithAnimation>
 
-      {/* Casos de Uso */}
-      <SectionWithAnimation className="py-24 bg-gradient-to-br from-purple-50 to-cyan-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 text-center mb-6 tracking-tight">
-            Historias que queremos hacer realidad
-          </h2>
-          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto text-lg leading-relaxed">
-            Prisma está comenzando. Estas son las historias que queremos hacer posibles. ¿Quieres ser uno de los primeros?
-          </p>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-purple-200">
-              <div className="flex items-center mb-5">
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-200 to-cyan-200 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">👩‍💻</span>
-                </div>
-                <h3 className="font-bold text-gray-900 text-lg">María, Ing. Informática</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed">
-                Durante 4 años construyó un portfolio con 8 proyectos. Cuando se graduó, una startup la contactó porque vio su trabajo en Prisma. Hoy es su primera developer.
-              </p>
-            </div>
-
-            <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-200">
-              <div className="flex items-center mb-5">
-                <div className="w-14 h-14 bg-gradient-to-br from-cyan-200 to-purple-200 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
-                  <span className="text-2xl">🚀</span>
-                </div>
-                <h3 className="font-bold text-gray-900 text-lg">Carlos & Ana, Co-founders</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed">
-                Se conocieron en Prisma buscando colaboradores para un proyecto. Hoy tienen una startup financiada que nació de esa conexión.
-              </p>
-            </div>
-          </div>
-        </div>
-      </SectionWithAnimation>
-
       {/* Para Estudiantes */}
       <SectionWithAnimation id="estudiantes" className="py-24 bg-gradient-to-br from-purple-50 via-white to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -605,7 +567,7 @@ const PrismaLanding = () => {
               Para Estudiantes
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Construye tu identidad profesional desde el primer día universitario
+              Construye tu identidad profesional desde el primer día
             </p>
           </div>
 
@@ -618,36 +580,36 @@ const PrismaLanding = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Sube proyectos con imágenes, videos y descripción detallada</span>
+                  <span className="text-gray-700">Sube tus experiencias y proyectos con imágenes, videos y descripción detallada.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Muestra tu proceso de trabajo, no solo el resultado final</span>
+                  <span className="text-gray-700">Proceso > Resultado: Muestra cómo piensas y resuelves problemas. </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Valida tus habilidades con certificaciones y proyectos reales</span>
+                  <span className="text-gray-700">Valida tus habilidades con certificaciones y proyectos reales.</span>
                 </li>
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">🤝 Conecta y Colabora</h3>
+            <div className="bg-gradient-to-br from-cyan-50 to-purple-50 rounded-2xl p-8 shadow-lg border border-orange-200">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">🧩 Encuentra Socios y Co-founders</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Encuentra compañeros para ese proyecto que tienes en mente, conecta con alumni que ya están donde quieres estar, y construye tu red profesional desde la universidad.
+                Arma tu Dream Team para ese proyecto que tienes en mente, conecta con alumni que ya están donde quieres estar, y construye tu red profesional desde la universidad.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Busca colaboradores por habilidades específicas</span>
+                  <span className="text-gray-700">Filtra por skills: Encuentra al colaborador exacto que necesitas.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Conecta con mentores alumni de tu universidad</span>
+                  <span className="text-gray-700">Match de Co-founders: Conecta con estudiantes que comparten tu visión y ambición.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Arma equipos para proyectos emprendedores</span>
+                  <span className="text-gray-700">Mentores Alumni: Valida tu idea con egresados que ya emprendieron.</span>
                 </li>
               </ul>
             </div>
@@ -655,20 +617,20 @@ const PrismaLanding = () => {
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-purple-100">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">🚀 Destaca Ante Empresas</h3>
               <p className="text-gray-600 mb-4 leading-relaxed">
-                Cuando llegue el momento de buscar oportunidades laborales, tu perfil en Prisma habla por ti. Las empresas ven tu trabajo real, no solo palabras en un CV.
+                Cuando llegue el momento de buscar oportunidades laborales, tu perfil en Prisma habla por ti. Haz que los reclutadores te busquen por lo que eres capaz de construir.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Empresas te descubren por tu portafolio completo</span>
+                  <span className="text-gray-700">Empresas te descubren por tu portafolio completo.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Tu universidad valida tu perfil, generando confianza</span>
+                  <span className="text-gray-700">El respaldo de tu universidad te pone por delante de candidatos externos</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-purple-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Recibe oportunidades alineadas con tu talento real</span>
+                  <span className="text-gray-700">Recibe propuestas que calzan con tus skills reales, no spam.</span>
                 </li>
               </ul>
             </div>
@@ -700,15 +662,15 @@ const PrismaLanding = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Showcase institucional con proyectos destacados</span>
+                  <span className="text-gray-700">Showcase institucional con proyectos destacados.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Métricas de empleabilidad en tiempo real</span>
+                  <span className="text-gray-700">Métricas de empleabilidad en tiempo real.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Historias de éxito de egresados documentadas</span>
+                  <span className="text-gray-700">Historias de éxito de egresados documentadas.</span>
                 </li>
               </ul>
             </div>
@@ -721,15 +683,15 @@ const PrismaLanding = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Conecta estudiantes con alumni por carrera e industria</span>
+                  <span className="text-gray-700">Conecta estudiantes con alumni por carrera e industria.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Programas de mentoría integrados en la plataforma</span>
+                  <span className="text-gray-700">Programas de mentoría integrados en la plataforma.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Engagement continuo con tu comunidad egresada</span>
+                  <span className="text-gray-700">Engagement continuo con tu comunidad egresada.</span>
                 </li>
               </ul>
             </div>
@@ -742,15 +704,15 @@ const PrismaLanding = () => {
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Empresas acceden a perfiles validados por tu institución</span>
+                  <span className="text-gray-700">Empresas acceden a perfiles validados por tu institución.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Tracking de colocación laboral de egresados</span>
+                  <span className="text-gray-700">Tracking de colocación laboral de egresados.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-700">Ferias de empleo virtuales integradas</span>
+                  <span className="text-gray-700">Ferias de empleo virtuales integradas.</span>
                 </li>
               </ul>
             </div>
@@ -835,6 +797,44 @@ const PrismaLanding = () => {
                   <span className="text-gray-700">Elimina intermediarios costosos</span>
                 </li>
               </ul>
+            </div>
+          </div>
+        </div>
+      </SectionWithAnimation>
+
+      {/* Casos de Uso */}
+      <SectionWithAnimation className="py-24 bg-gradient-to-br from-purple-50 to-cyan-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-900 text-center mb-6 tracking-tight">
+            Historias que queremos hacer realidad
+          </h2>
+          <p className="text-center text-gray-600 mb-16 max-w-2xl mx-auto text-lg leading-relaxed">
+            Prisma está comenzando. Estas son las historias que queremos hacer posibles. ¿Quieres ser uno de los primeros?
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-purple-200">
+              <div className="flex items-center mb-5">
+                <div className="w-14 h-14 bg-gradient-to-br from-purple-200 to-cyan-200 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">👩‍💻</span>
+                </div>
+                <h3 className="font-bold text-gray-900 text-lg">María, Ing. Informática</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Durante 4 años construyó un portfolio con 8 proyectos. Cuando se graduó, una startup la contactó porque vio su trabajo en Prisma. Hoy es su primera developer.
+              </p>
+            </div>
+
+            <div className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-blue-200">
+              <div className="flex items-center mb-5">
+                <div className="w-14 h-14 bg-gradient-to-br from-cyan-200 to-purple-200 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h3 className="font-bold text-gray-900 text-lg">Carlos & Ana, Co-founders</h3>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                Se conocieron en Prisma buscando colaboradores para un proyecto. Hoy tienen una startup financiada que nació de esa conexión.
+              </p>
             </div>
           </div>
         </div>
@@ -1062,7 +1062,7 @@ const PrismaLanding = () => {
                 />
               </div>
               <p className="text-gray-400 text-sm">
-                Donde el talento encuentra su luz
+                Talento, Networking y Emprendimiento
               </p>
             </div>
 
