@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Briefcase, Users, Search, CheckCircle, Globe, TrendingUp, ChevronDown, GraduationCap, Building2, ArrowRight, Mail, Menu, X } from 'lucide-react';
+import { Briefcase, Users, Search, CheckCircle, Globe, TrendingUp, ChevronDown, GraduationCap, Building2, ArrowRight, Mail, Menu, X, Linkedin } from 'lucide-react';
 import './App.css';
 import demoImage from './assets/Prisma Profile Ex.png';
 import prismaLogo from './assets/logo-prisma.PNG';
@@ -1091,6 +1091,12 @@ const PrismaLanding = () => {
                   contacto@tuprisma.com
                 </li>
                 <li>📍 Santiago, Chile</li>
+                <li className="flex items-center">
+                  <a href="https://www.linkedin.com/company/tuprisma-edu/" target="_blank" rel="noopener noreferrer" className="flex items-center hover:text-white transition">
+                    <Linkedin className="w-4 h-4 mr-2" />
+                    Prisma | LinkedIn
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
